@@ -62,3 +62,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## docker Command
+docker exec -it learning-laravel-tdd-app-1 ash
+
+## laravel Command
+php artisan make:test --unit Models/VacancyLevelTest
+php artisan make:model Lesson -a
+php artisan make:model Reservation -m -f
+
+## laravel　testCommand
+php artisan test tests/Feature/Http/Controllers/LessonControllerTest.php
+php artisan test tests/Unit/Models/UserTest.php

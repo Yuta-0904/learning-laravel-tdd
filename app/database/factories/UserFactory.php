@@ -36,4 +36,22 @@ class UserFactory extends Factory
             ];
         });
     }
+
+    public function lessThan1Year()
+    {
+      return $this->state(function (array $attributes) {
+        return [
+            'name' => '加入1年未満',
+        ];
+      });
+    }
+
+    public function lessThan2Year()
+    {
+      return $this->state(function (array $attributes) {
+        return [
+            'name' => '加入2年未満',
+        ];
+      });
+    }
 }
