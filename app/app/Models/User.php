@@ -48,7 +48,7 @@ class User extends Authenticatable
     public function canReserve(Lesson $lesson): void
     {
         if ($lesson->remainingCount() === 0) {
-            throw new \Exception('レッスンの予約可能上限に達しています。');
+            throw new \Exception('レッスンの予約可能上限に達しています!');
         }
         if ($this->profile->plan === 'gold') {
             return;
