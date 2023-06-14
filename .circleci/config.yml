@@ -43,13 +43,13 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "src/composer.json" }}
+            - v1-dependencies-{{ checksum "app/composer.json" }}
             - v1-dependencies-
 
       - run: composer install -n --prefer-dist
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "src/composer.json" }}
+          key: v1-dependencies-{{ checksum "app/composer.json" }}
           paths:
             - ./vendor
 
