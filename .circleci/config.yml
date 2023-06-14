@@ -47,7 +47,7 @@ jobs:
             - v1-dependencies-
 
       - run:
-          working_directory: src 
+          working_directory: app 
           command: composer install -n --prefer-dist
 
       - save_cache:
