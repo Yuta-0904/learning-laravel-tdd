@@ -49,6 +49,7 @@ jobs:
       - run:
           working_directory: app 
           command: composer install -n --prefer-dist
+                   composer update -n --prefer-dist
 
       - save_cache:
           key: v1-dependencies-{{ checksum "app/composer.json" }}
